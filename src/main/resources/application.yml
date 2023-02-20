@@ -1,0 +1,14 @@
+# Eureka 서버가 웹 서비스로 기동됨.
+server:
+  port: 8761
+
+# 고유 ID 값
+spring:
+  application:
+    name: discoveryservice
+
+# 유레카 라이브러리가 포함된 채 스프링을 기동하면 기본적으로 유레카 클라이언트 역할로써 어딘가에 등록하는 작업을 시도한다.
+eureka:
+  client:
+    register-with-eureka: false # 설정하지않으면 true (자신의 정보를 자신에게 등록(의미없는작업))
+    fetch-registry: false # 설정하지않으면 true (자신의 정보를 자신에게 등록(의미없는작업))
